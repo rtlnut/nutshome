@@ -1,0 +1,395 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>坚果的小窝</title>
+<link rel="shortcut icon" href="https://nut.fyi/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://nut.fyi/media/css/tailwind.css">
+<link rel="stylesheet" href="https://nut.fyi/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="坚果的小窝 - Atom Feed" href="https://nut.fyi/atom.xml">
+
+    
+
+  <meta name="description" content="我也不知道写点什么，随便放一句在这吧
+爱你们:)" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://nut.fyi/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      坚果的小窝
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      我也不知道写点什么，随便放一句在这吧
+爱你们:)
+    </div>
+    
+      <div class="mt-8 text-center md:text-left">
+        <a
+          href="/post/about" 
+          arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        >了解更多</a>
+      </div>
+    
+    
+      <div class="mt-8 flex items-center">
+        
+          <div class="text-gray-500 mr-2">
+            关注我 👉
+          </div>
+        
+        
+          
+        
+          
+            
+              <a href="mailto:rtlnut@outlook.com" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-mail-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://github.com/rtlnut" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-github-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+            
+              <a href="https://www.zhihu.com/people/jian-guo-22-31" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-zhihu-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://www.facebook.com/littlenut624/" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-facebook-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://nut.fyi/images/avatar.png?v=1696087141144" alt="坚果的小窝" width="100%" height="100%">
+  </div>
+</header>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/wang-zhan-ri-zhi-2023930/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          网站日志 2023.9.30
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-09-30</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        1.由于未知原因，原来的评论系统崩溃了，故将评论系统由Gitalk改为Valine。
+2.一些其他的小优化
+
+      </div>
+      <a href="https://nut.fyi/post/wang-zhan-ri-zhi-2023930/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/wo-men-yu-dao-liao-yi-xie-ji-zhu-wen-ti/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          我们遇到了一些技术问题
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-09-30</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        九月最后一天了，先为我之前这么久没更新道个歉，具体我会在过后几天的文章中解释。
+正如标题所说，网站每周需要手动重新部署一次真的很麻烦。
+我尝试了许多方法，包括但不限于直接买服务器用其他博客系统或按月订阅Zeabur的开发者计划，最后都没啥用...
+      </div>
+      <a href="https://nut.fyi/post/wo-men-yu-dao-liao-yi-xie-ji-zhu-wen-ti/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/xin-kai-shi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          新开始
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-09-03</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        还有半个小时走，先随便写点吧，真忘了
+特别困，精神上的那种疲惫
+完全不想上学
+军训
+篝火晚会就是个舞台，没篝火
+海阔天空我觉得唱的不好，那的麦克风声音特别小
+活动结束都快十一点了，赶紧回去睡觉
+十二点多才安静下来，这一晚上帐篷里又冷又湿起来...
+      </div>
+      <a href="https://nut.fyi/post/xin-kai-shi/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/goodbye-summer/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Goodbye, summer.
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-29</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        前言
+记得我6月27号去欢乐谷回家的路上自言自语说过一句
+&quot;This summer wiil be the most wonderful summer.&quot;
+事实证明，它确实是最棒的夏天
+为什么用再见夏天作为文章标题，因为...
+      </div>
+      <a href="https://nut.fyi/post/goodbye-summer/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/bu-mian-ye/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          不眠夜
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-27</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        不知道是感冒了还是过敏了
+鼻炎特别严重，躺床上睡不着
+本来打算写点的还是算了
+今天最遗憾的是没抱你
+
+      </div>
+      <a href="https://nut.fyi/post/bu-mian-ye/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/jun-xun-hou-ji/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          军训后记
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-24</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        开头
+有一点我想说明
+我原先的计划是这个文章可能写的偏长，大概有七八百字
+大概算了一下目前全文一千多字，这段是一开始写的就不删了
+在我走出校门的那一刻放弃了
+可能是因为情绪原因或者别的，感觉我又回到了军训前的状态，在家里无所事事
+有时候还是...
+      </div>
+      <a href="https://nut.fyi/post/jun-xun-hou-ji/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/ming-tian-kai-shi-jun-xun-shi-tian/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          明天开始军训十天
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        现在心情非常崩溃，整个人处于一种颓废的状态
+作业还差好多好多，一点写的动力都没有，就在床上躺着，我还想军训回来那四天休息抽出一两天和朋友出去玩玩，这事看来得再计划一下了
+昨天晚上已经非常困了还是不想睡，今天肯定更难睡着了，一起来就去军训我想...
+      </div>
+      <a href="https://nut.fyi/post/ming-tian-kai-shi-jun-xun-shi-tian/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/bao-dao-hui-lai-liao/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          报道回来了
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        有人催我更新是我没想到的
+今天还好，没考试，同学看起来都比较好相处，我还加了两个同学微信
+怎么看事情都在往好的方向发展对吧
+话又说回来，我总觉得自己离不开家，一想到住宿我就头疼，我对半公共空间很膈应
+说出来这些确实不好，但是我也确实是这么想...
+      </div>
+      <a href="https://nut.fyi/post/bao-dao-hui-lai-liao/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/ming-tian-bao-dao/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          明天报道
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        明天报道了，好紧张
+我现在居然不为写不完作业而紧张了
+明天8:00-11:30报道
+我总觉得三个半小时会考试，考试我就完了，我现在连中文都不会写
+家里人今天晚上给我买了蛋糕补过了生日，挺好的 😃
+一会睡觉了明天六点半起床
+晚安
+...
+      </div>
+      <a href="https://nut.fyi/post/ming-tian-bao-dao/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nut.fyi/post/birthday-15-shit/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          坏消息：家里人都不知道今天是我的生日
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2023-08-11</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        如题，现在晚上八点多了，依然没人提这事
+之前过生日都好几天提前告诉我买蛋糕之类的
+我一点也不爱吃蛋糕，我更无所谓生日礼物，并且从来没找爸妈要过礼物
+说实话主要是因为心理落差太大了，到现在只有我的三个朋友微信跟我说了生日快乐（谢谢你们）
+现在...
+      </div>
+      <a href="https://nut.fyi/post/birthday-15-shit/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+    
+      <a href="https://nut.fyi/page/2" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://nut.fyi/media/scripts/main.js"></script>
+</body>
+
+</html>
